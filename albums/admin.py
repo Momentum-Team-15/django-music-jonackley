@@ -1,3 +1,5 @@
 from django.contrib import admin
-
-# Register your models here.
+from .models import User, Album
+# Register your models here so you can see them in admin.
+admin.site.register(User)
+admin.site.register(Album)
