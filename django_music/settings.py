@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6!1p$t&*^c!&h67g&+q_y_ilncj#&f$$61e!f(9-fcq#g*jh9#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', ]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -39,16 +39,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'albums',
+    'debug_toolbar'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'django_music.urls'
@@ -125,3 +128,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'albums.User'
+
+INTERNAL_IPS = [
+    '127.0.0.1'
+]
