@@ -9,4 +9,4 @@ def index(request):
 
 def album_detail(request, pk):
     album = Album.objects.get(pk=pk)
-    return render(request, 'albums/album_detail.html', {'album':album})
+    return render(request, 'album/album_detail.html', {'album':album})

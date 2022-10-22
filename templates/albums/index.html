@@ -1,3 +1,7 @@
 {% extends 'base.html' %} {% block content %}
-<h> this is my homepage called index.html</h>
+<h> this is my homepage called Homer Page</h>
+
+{% for album in albums %}
+<p><a href="{% url 'album_detail' pk=album.pk %}"> {{ album.title }}</a> by {{ album.artist }}</p>
+{% endfor %}
 {% endblock %}
