@@ -2,12 +2,15 @@
 
 {% block content %}
 <h1>Album Details</h1>
-<p>{{ album.title }}</p>
+<p> Album: {{ album.title }}</p>
 
-<p>{{ album.artist }}</p>
-<img src="" alt="">
+<p>Artist: {{ album.artist }}</p>
 
-{% for song in album.songs %}
-<li>{{ song.name }}</li>
+
+{% for song in songs %}
+<li>{{ album.song.name }}</li>
 {% endfor %}
+
+<p> Created: {{ album.created_at }}</p>
+
 {% endblock %}
