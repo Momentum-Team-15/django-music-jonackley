@@ -10,7 +10,11 @@ def index(request):
 
 def album_detail(request, pk):
     album = Album.objects.get(pk=pk)
-    return render(request, 'albums/album_detail.html', {'song': song})
+    return render(request, 'albums/album_detail.html', {'album': album})
+
+def album_song_list(request, pk):
+    song = Song.objects.get(pk=pk)
+    return render(request, 'music/album_detail.html', {'song': song})
 
 def create_album(request):
     if request.method == 'POST':
@@ -32,3 +36,24 @@ def create_album(request):
         # if user is visiting a page with GET request, not submitting
         # the form yet, render a blank means
     return render(request, 'albums/create_album.html', {'form': form})
+
+def album_delete(request):
+    album =  Album.objects.get(pk=pk)
+    return render(request
+    'albums/ablum_delete.html',
+    {'album':album})
+
+def album_delete(request, id):
+    album = Album.objects.get(id=id) # we need this for both GET and POST
+
+    if request.method == 'POST':
+        # delete the band from the database
+        album.delete()
+        # redirect to the bands list
+        return redirect('albums')
+
+    # no need for an `else` here. If it's a GET request, just continue
+
+    return render(request,
+                    'listings/album_delete.html',
+                    {'album': album})

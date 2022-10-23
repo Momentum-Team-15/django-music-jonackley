@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}"
-    <title>Document</title>
+    <title>Django Go Go Music</title>
 </head>
 <header>
-    <a href={% url 'home' %}>Homepage</a>
+    <break></break>
+    <a href={% url 'home' %}>Go Home!</a>
+    <a href={% url 'create_album' %}>Create An Album!</a>
+    <a href={% url 'album_delete' %}>Delete an Album 🥲</a>
 </header>
 <body>
     

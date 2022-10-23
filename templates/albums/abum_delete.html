@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Delete an Artist</h1>
+
+<p>Are you super, duper, extra, intertextual, extraterrestial certain you want to Delete?: {{ artist.name }}</p>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Delete">
+</form>
+
+{% endblock %}
