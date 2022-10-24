@@ -7,7 +7,7 @@
 <h2>Are you super, duper, extra, intertextual, extraterrestial certain you want to Delete?: {{ artist.title }}</h2>
 
 <form method="post">
-    {% csrf_token %}
+    {% csrf_token %} {{ form.as_p }}
     <button class="button" type="submit">Delete</button>>
 </form>
 
