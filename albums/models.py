@@ -34,10 +34,10 @@ class Artist(models.Model):
     def __str__(self):
         return f"{self.name}"
 
-class Playlist(models.Model):
-    user= models.ForeignKey('User', on_delete=models.CASCADE)
-    playlist_name = models.CharField(max_length=200)
-    song = models.ForeignKey('Song', on_delete= models.CASCADE)
+#class Playlist(models.Model):
+   # user= models.ForeignKey('User', on_delete=models.CASCADE)
+    #playlist_name = models.CharField(max_length=200)
+   # song = models.ForeignKey('Song', on_delete= models.CASCADE)
 
-    def __str__(self):
-        return f"{self.user}"
+    #def __str__(self):
+      #  return f"{self.user}"

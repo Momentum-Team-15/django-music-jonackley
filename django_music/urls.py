@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 from albums import views
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +28,7 @@ urlpatterns = [
     path('__debug__/', include('debug_toolbar.urls')),
     path('album/<int:pk>', views.album_detail, name='album_detail'),
     path('album/new', views.create_album, name='create_album'),
-    path('album/<int:pk>', views.album_delete, name='album_delete')
+    path('album/delete/<int:pk>', views.album_delete, name='album_delete'),
+    path('album/edit/<int:pk>', views.album_edit, name='album_edit'),
+    
 ]
