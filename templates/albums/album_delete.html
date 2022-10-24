@@ -1,13 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<a href="{% url 'home' %}">Go Home!</a>
 
-<h1> Delete an Artist</h1>
+<h2>Are you super, duper, extra, intertextual, extraterrestial certain you want to Delete? </h2>
 
-<h2>Are you super, duper, extra, intertextual, extraterrestial certain you want to Delete?: {{ artist.title }}</h2>
-
-<form method="post">
-    {% csrf_token %} {{ form.as_p }}
+<form method="POST">{% csrf_token %} 
     <button class="button" type="submit">Delete</button>>
 </form>
 

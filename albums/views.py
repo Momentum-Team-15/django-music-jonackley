@@ -38,7 +38,7 @@ def album_delete(request, pk):
     if request.method == "POST":
         post.delete()
         return redirect('home')
-    return render(request, 'albums/album_delete.html')
+    return render(request, 'albums/album_delete.html', {'form': form})
     
 def album_edit(request, pk):
     post = get_object_or_404(Album, pk=pk)

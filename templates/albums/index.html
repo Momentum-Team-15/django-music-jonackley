@@ -4,5 +4,6 @@
 {% for album in albums %}
 <p><a href="{% url 'album_detail' pk=album.pk %}"> {{ album.title }}</a> by {{ album.artist }}</p>
 <br>
+
 {% endfor %}
 {% endblock %}
