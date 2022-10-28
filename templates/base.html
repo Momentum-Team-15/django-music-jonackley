@@ -9,15 +9,17 @@
     <title>Document</title>
 </head>
 <header>
-    <h2 class="header">Django Go Go Music</h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Django_Reinhardt_%28Gottlieb_07301%29.jpg/440px-Django_Reinhardt_%28Gottlieb_07301%29.jpg">
+    <h2>Django Go Go Music</h2>
+    <br>
+    <h3><a href={% url 'create_album' %}>Create An Album!</a></h3>
 </header>
 <body>
-    
-    <div class ="container">
-        <h2><a href={% url 'create_album' %}>Create An Album!</a></h2>
-    </div>
-
+    <div class="django">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Django_Reinhardt_%28Gottlieb_07301%29.jpg/440px-Django_Reinhardt_%28Gottlieb_07301%29.jpg">
+   </div>
+    <br>
+    <h3>Your Albums! Django says to click on the album title for more info!</h3>
+    <div class="box"
 {% block content %}
 {% endblock %}
 
