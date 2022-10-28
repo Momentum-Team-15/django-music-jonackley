@@ -6,10 +6,12 @@
 <br>
 <h1>Album Details</h1>
 <br>
-<p> Album: {{ album.title }}</p>
+<p class="look">Album: {{ album.title }}</p>
 
-<p>Artist: {{ album.artist }}</p>
+<p class="look">Artist: {{ album.artist }}</p>
 
-<p> Created: {{ album.created_at }}</p>
+<p class="look"></p>Created: {{ album.created_at }}</p>
+
+<a href="{% url 'album_edit' pk=album.pk %}">Edit</a>
 
 {% endblock %}

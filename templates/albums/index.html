@@ -5,12 +5,11 @@
 
     
 
-<div class="indexlist">
 
-    <p><a href="{% url 'album_detail' pk=album.pk %}"> {{ album.title }}</a> by {{ album.artist }}</p>
-    <br>
+
+<p><a href="{% url 'album_detail' pk=album.pk %}"> {{ album.title }}</a> by {{ album.artist }}</p>
+
     
-</div>
 
 {% endfor %}
 {% endblock %}
