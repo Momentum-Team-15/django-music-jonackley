@@ -1,5 +1,5 @@
-from django.shortcuts import get_object_or_404, render, redirect
-from .models import Album, Song
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Album
 from albums.forms import AlbumForm
 
 
@@ -11,10 +11,6 @@ def index(request):
 def album_detail(request, pk):
     album = Album.objects.get(pk=pk)
     return render(request, 'albums/album_detail.html', {'album': album})
-
-def album_song_list(request, pk):
-    song = Song.objects.get(pk=pk)
-    return render(request, 'albums/album_detail.html', {'song': song})
 
 def create_album(request):
     if request.method == 'POST':
@@ -43,7 +39,7 @@ def album_delete(request, pk):
 def album_edit(request, pk):
     post = get_object_or_404(Album, pk=pk)
     if request.method == "POST":
-        form = AlbumForm(request.POST, request.FILES, instance=post)
+        form = AlbumForm(request.POST, instance=post)
         if form.is_valid():
             post = form.save(commit=False)
             post.save()

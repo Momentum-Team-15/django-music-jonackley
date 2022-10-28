@@ -28,7 +28,7 @@ urlpatterns = [
     path('__debug__/', include('debug_toolbar.urls')),
     path('album/<int:pk>', views.album_detail, name='album_detail'),
     path('album/new', views.create_album, name='create_album'),
-    path('album/delete', views.album_delete, name='album_delete'),
-    path('album/edit', views.album_edit, name='album_edit'),
+    path('album/<int:pk>/delete', views.album_delete, name='album_delete'),
+    path('album/<int:pk>/edit', views.album_edit, name='album_edit'),
     
 ]

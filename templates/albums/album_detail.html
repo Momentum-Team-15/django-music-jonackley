@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+<h3><a href="{% url 'home" %}">Go Home!</a></h3>
+<br>
+<h3><a href="{% url 'album_delete pk=album.pk %}">Delete an Album? Click Me! Click Me!</a></h3>
+<br>
 <h1>Album Details</h1>
+<br>
 <p> Album: {{ album.title }}</p>
 
 <p>Artist: {{ album.artist }}</p>
 
-
+<p>Songs:</p>
 {% for song in songs %}
 <li>{{ album.song.name }}</li>
 {% endfor %}

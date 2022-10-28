@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"
-    <title>Django Go Go Music</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
 </head>
 <header>
-    <br>
-    <a href={% url 'home' %}>Go Home!</a>
-    <a href={% url 'create_album' %}>Create An Album!</a>
-    <br>
-    <br>
+    <h2 class="header">Django Go Go Music</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Django_Reinhardt_%28Gottlieb_07301%29.jpg/440px-Django_Reinhardt_%28Gottlieb_07301%29.jpg">
 </header>
 <body>
     
-
+    <div class ="container">
+        <h2><a href={% url 'create_album' %}>Create An Album!</a></h2>
+    </div>
 
 {% block content %}
 {% endblock %}
+
 </body>
 </html>
